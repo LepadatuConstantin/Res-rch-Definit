@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Definit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Research Definit</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/admin">Write</a>
+    </nav>
+  </header>
+  <main>
+    <section id="posts">
+      <h2>Articles</h2>
+      <!-- Articles will appear here -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Research Definit</p>
+  </footer>
+
+  <script>
+    fetch('articles')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('posts').innerHTML += "<p>Articles will be listed automatically by the CMS on build.</p>";
+      });
+  </script>
+</body>
+</html>
