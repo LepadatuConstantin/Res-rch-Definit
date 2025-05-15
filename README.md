@@ -1,0 +1,1 @@
+# Res-rch-Definit
